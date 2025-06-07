@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geografie Altfel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .fancy-button {
+        @apply relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white transition duration-300 ease-out border-2 border-blue-600 rounded-full shadow-md group;
+      }
+      .fancy-button::before {
+        content: "";
+        @apply absolute w-full h-0 top-0 left-0 bg-blue-600 transition-all duration-300 ease-out z-0 group-hover:h-full;
+      }
+      .fancy-button span {
+        @apply relative z-10 transition-colors duration-300 ease-out group-hover:text-white;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-700 to-blue-500 text-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold tracking-tight">🌍 Geografie Altfel</h1>
+        <nav class="hidden md:flex space-x-6 text-lg">
+          <a href="#" class="hover:text-yellow-300 transition">Acasă</a>
+          <a href="#lectii" class="hover:text-yellow-300 transition">Lecții</a>
+          <a href="#harte" class="hover:text-yellow-300 transition">Hărți</a>
+          <a href="#quiz" class="hover:text-yellow-300 transition">Quiz-uri</a>
+          <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-100 py-24 text-center relative overflow-hidden">
+      <div class="max-w-3xl mx-auto z-10 relative">
+        <h2 class="text-5xl font-extrabold mb-4 text-blue-900">Descoperă lumea într-un mod captivant</h2>
+        <p class="text-xl text-gray-700 mb-8">Resurse interactive pentru elevi și profesori de geografie</p>
+        <a href="#lectii" class="fancy-button group"><span>Începe acum</span></a>
+      </div>
+      <div class="absolute -bottom-12 left-0 right-0 opacity-20">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/World_map_blank_without_borders.svg/1200px-World_map_blank_without_borders.svg.png" alt="World Map" class="mx-auto w-3/4">
+      </div>
+    </section>
+
+    <!-- Lecții Section -->
+    <section id="lectii" class="py-20 max-w-6xl mx-auto px-4">
+      <h3 class="text-4xl font-bold text-center text-blue-700 mb-12">Lecții Interactive</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white border rounded-2xl shadow-md p-6 hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2 text-blue-600">🌦️ Clima Terrei</h4>
+          <p class="text-gray-600">Explorează tipurile de climă cu animații și grafice interactive.</p>
+          <a href="#" class="mt-4 fancy-button group w-full text-center block"><span>Deschide lecția</span></a>
+        </div>
+        <div class="bg-white border rounded-2xl shadow-md p-6 hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2 text-blue-600">⛰️ Relieful Lumii</h4>
+          <p class="text-gray-600">Învață despre munți, câmpii și forme de relief prin hărți interactive.</p>
+          <a href="#" class="mt-4 fancy-button group w-full text-center block"><span>Deschide lecția</span></a>
+        </div>
+        <div class="bg-white border rounded-2xl shadow-md p-6 hover:shadow-xl transition">
+          <h4 class="text-xl font-semibold mb-2 text-blue-600">🏙️ Populația și Așezările</h4>
+          <p class="text-gray-600">Analizează distribuția populației și urbanizarea cu exemple reale.</p>
+          <a href="#" class="mt-4 fancy-button group w-full text-center block"><span>Deschide lecția</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hărți Interactive Section -->
+    <section id="harte" class="py-20 bg-blue-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h3 class="text-4xl font-bold text-center text-blue-700 mb-12">🗺️ Hărți Interactive</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <iframe class="w-full h-80 rounded-xl shadow-md" src="https://www.google.com/maps/d/embed?mid=1iKJtCKVcpvv1EzffH9XxGkSbso4" allowfullscreen></iframe>
+          <div class="flex flex-col justify-center">
+            <p class="text-lg text-gray-700 mb-4">Explorează hărți tematice pentru fiecare regiune geografică a lumii, create special pentru lecții și activități școlare.</p>
+            <a href="#" class="fancy-button group w-max"><span>Vezi mai multe hărți</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="bg-gray-100 py-20">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h3 class="text-4xl font-bold text-blue-700 mb-6">🧠 Testează-ți Cunoștințele</h3>
+        <p class="text-lg text-gray-700 mb-8">Fă un quiz rapid și vezi cât de bine stăpânești geografia!</p>
+        <a href="#" class="fancy-button group"><span>Începe Quiz-ul</span></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-8 mt-16">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-lg">&copy; 2025 Geografie Altfel | Creat de un profesor pasionat</p>
+        <div class="mt-2 space-x-4">
+          <a href="#" class="hover:underline">Facebook</a>
+          <a href="#" class="hover:underline">YouTube</a>
+          <a href="#" class="hover:underline">Email</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
